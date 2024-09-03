@@ -24,7 +24,7 @@ class _PersegiCalculatorState extends State<PersegiCalculator> {
           ),
         ),
       ),
-      backgroundColor: Color.fromARGB(255, 182, 204, 233),
+      backgroundColor: Color.fromARGB(255, 255, 255, 255),
       body: ScopedModelDescendant<CalculatorModel>(
         builder: (context, child, model) {
           return Padding(

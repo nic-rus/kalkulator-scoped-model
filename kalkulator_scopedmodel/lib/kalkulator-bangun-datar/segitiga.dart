@@ -16,15 +16,15 @@ class _SegitigaCalculatorState extends State<SegitigaCalculator> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 7, 79, 173), // AppBar color
+        backgroundColor: Color.fromARGB(255, 7, 79, 173), 
         title: Text(
           'Kalkulator Segitiga',
           style: TextStyle(
-            color: Colors.white, // Text color
+            color: Colors.white,
           ),
         ),
       ),
-      backgroundColor: Color.fromARGB(255, 182, 204, 233), // Background color
+      backgroundColor: Color.fromARGB(255, 255, 255, 255),
       body: ScopedModelDescendant<CalculatorModel>(
         builder: (context, child, model) {
           return Padding(
@@ -32,11 +32,11 @@ class _SegitigaCalculatorState extends State<SegitigaCalculator> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Image.asset(
-                  'image/pizzas.png', // Path to your image
-                  height: 150, // Adjust the height as needed
+                CustomPaint(
+                  size: Size(200, 200), 
+                  painter: TrianglePainter(),
                 ),
-                SizedBox(height: 16), // Space between image and next widget
+                SizedBox(height: 16), 
                 TextField(
                   keyboardType: TextInputType.number,
                   decoration: InputDecoration(
@@ -72,8 +72,8 @@ class _SegitigaCalculatorState extends State<SegitigaCalculator> {
                     });
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color.fromARGB(255, 105, 139, 182), // Background color
-                    foregroundColor: Colors.white, // Text color
+                    backgroundColor: Color.fromARGB(255, 105, 139, 182), 
+                    foregroundColor: Colors.white, 
                   ),
                   child: Text('Hitung'),
                 ),
@@ -90,5 +90,27 @@ class _SegitigaCalculatorState extends State<SegitigaCalculator> {
         },
       ),
     );
+  }
+}
+
+class TrianglePainter extends CustomPainter {
+  @override
+  void paint(Canvas canvas, Size size) {
+    final paint = Paint()
+      ..color = Color.fromARGB(255, 105, 139, 182) 
+      ..style = PaintingStyle.fill;
+
+    final path = Path();
+    path.moveTo(size.width / 2, 0); 
+    path.lineTo(0, size.height); 
+    path.lineTo(size.width, size.height); 
+    path.close();
+
+    canvas.drawPath(path, paint);
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) {
+    return false;
   }
 }
