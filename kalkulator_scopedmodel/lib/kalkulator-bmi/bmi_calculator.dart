@@ -1,4 +1,4 @@
-import 'package:kalkulator_scopedmodel/kalkulator-bmi/bmi_model.dart';
+import 'package:kalkulator_scopedmodel/calculator_models.dart';
 import 'package:kalkulator_scopedmodel/kalkulator-bmi/bmi_result.dart';
 import 'package:kalkulator_scopedmodel/kalkulator-bmi/input_field.dart';
 import 'package:flutter/material.dart';
@@ -13,7 +13,7 @@ class BmiCalculatorScreen extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: ScopedModelDescendant<BmiModel>(
+        child: ScopedModelDescendant<CalculatorModel>(
           builder: (context, child, model) {
             return Column(
               crossAxisAlignment: CrossAxisAlignment.center,

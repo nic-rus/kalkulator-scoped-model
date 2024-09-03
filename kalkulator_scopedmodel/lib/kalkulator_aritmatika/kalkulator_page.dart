@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:kalkulator_scopedmodel/kalkulator_aritmatika/models/kalkulator.dart';
+import 'package:kalkulator_scopedmodel/calculator_models.dart';
 import 'package:scoped_model/scoped_model.dart';
 
 class KalkulatorPage extends StatelessWidget {
@@ -13,7 +13,7 @@ class KalkulatorPage extends StatelessWidget {
         title: const Text('Kalkulator Aritmatika'),
       ),
       // ScopedModelDescendant<Kalkulator> untuk instance dari kalkulator
-      body: ScopedModelDescendant<Kalkulator>(
+      body: ScopedModelDescendant<CalculatorModel>(
         builder: (context, child, model) {
           return Padding(
             padding: const EdgeInsets.all(20.0),

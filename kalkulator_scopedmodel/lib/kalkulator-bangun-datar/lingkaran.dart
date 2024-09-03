@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:kalkulator_scopedmodel/calculator_models.dart';
 import 'package:scoped_model/scoped_model.dart';
-import 'shape_model.dart';
 
 class LingkaranCalculator extends StatefulWidget {
   @override
@@ -24,7 +24,7 @@ class _LingkaranCalculatorState extends State<LingkaranCalculator> {
         ),
       ),
       backgroundColor: Color.fromARGB(255, 182, 204, 233), // Matching background color
-      body: ScopedModelDescendant<ShapeModel>(
+      body: ScopedModelDescendant<CalculatorModel>(
         builder: (context, child, model) {
           return Padding(
             padding: const EdgeInsets.all(16.0),
