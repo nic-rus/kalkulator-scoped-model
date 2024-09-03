@@ -31,11 +31,12 @@ class _LingkaranCalculatorState extends State<LingkaranCalculator> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Image.asset(
-                  'image/roda.png', // Path to your image
-                  height: 150, // Adjust the height as needed
+                Icon(
+                  Icons.circle, // Icon for circle
+                  size: 150, // Adjust the size as needed
+                  color: Color.fromARGB(255, 105, 139, 182), // Matching icon color
                 ),
-                SizedBox(height: 16), // Space between image and next widget
+                SizedBox(height: 16), // Space between icon and next widget
                 TextField(
                   keyboardType: TextInputType.number,
                   decoration: InputDecoration(
