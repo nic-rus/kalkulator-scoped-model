@@ -20,7 +20,7 @@ class _PersegiCalculatorState extends State<PersegiCalculator> {
         title: Text(
           'Kalkulator Persegi',
           style: TextStyle(
-            color: Colors.white, // Set the text color here
+            color: Colors.white,
           ),
         ),
       ),
@@ -32,11 +32,12 @@ class _PersegiCalculatorState extends State<PersegiCalculator> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Image.asset(
-                  'image/win.png', // Path to your image
-                  height: 150, // Adjust the height as needed
+                Icon(
+                  Icons.square, 
+                  size: 150, 
+                  color: Color.fromARGB(255, 105, 139, 182),
                 ),
-                SizedBox(height: 16), // Space between image and next widget
+                SizedBox(height: 16),
                 TextField(
                   keyboardType: TextInputType.number,
                   decoration: InputDecoration(
@@ -53,13 +54,13 @@ class _PersegiCalculatorState extends State<PersegiCalculator> {
                 ElevatedButton(
                   onPressed: () {
                     setState(() {
-                      model.setSide(_side); // Update model with the current side value
+                      model.setSide(_side);
                       _hasCalculated = true;
                     });
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color.fromARGB(255, 105, 139, 182), // Background color
-                    foregroundColor: Colors.white, // Text color
+                    backgroundColor: Color.fromARGB(255, 105, 139, 182),
+                    foregroundColor: Colors.white,
                   ),
                   child: Text('Hitung'),
                 ),

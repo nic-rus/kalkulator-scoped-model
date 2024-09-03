@@ -15,15 +15,15 @@ class _LingkaranCalculatorState extends State<LingkaranCalculator> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 7, 79, 173), // Matching AppBar color
+        backgroundColor: Color.fromARGB(255, 7, 79, 173), 
         title: Text(
           'Kalkulator Lingkaran',
           style: TextStyle(
-            color: Colors.white, // Matching text color
+            color: Colors.white,
           ),
         ),
       ),
-      backgroundColor: Color.fromARGB(255, 182, 204, 233), // Matching background color
+      backgroundColor: Color.fromARGB(255, 182, 204, 233),
       body: ScopedModelDescendant<CalculatorModel>(
         builder: (context, child, model) {
           return Padding(
@@ -32,11 +32,11 @@ class _LingkaranCalculatorState extends State<LingkaranCalculator> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Icon(
-                  Icons.circle, // Icon for circle
-                  size: 150, // Adjust the size as needed
-                  color: Color.fromARGB(255, 105, 139, 182), // Matching icon color
+                  Icons.circle, 
+                  size: 150,
+                  color: Color.fromARGB(255, 105, 139, 182), 
                 ),
-                SizedBox(height: 16), // Space between icon and next widget
+                SizedBox(height: 16), 
                 TextField(
                   keyboardType: TextInputType.number,
                   decoration: InputDecoration(
@@ -53,13 +53,13 @@ class _LingkaranCalculatorState extends State<LingkaranCalculator> {
                 ElevatedButton(
                   onPressed: () {
                     setState(() {
-                      model.setRadius(_radius); // Update model with the current radius value
+                      model.setRadius(_radius);
                       _hasCalculated = true;
                     });
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color.fromARGB(255, 105, 139, 182), // Background color
-                    foregroundColor: Colors.white, // Text color
+                    backgroundColor: Color.fromARGB(255, 105, 139, 182),
+                    foregroundColor: Colors.white, 
                   ),
                   child: Text('Hitung'),
                 ),

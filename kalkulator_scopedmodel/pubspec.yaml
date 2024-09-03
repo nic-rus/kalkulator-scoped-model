@@ -60,10 +60,6 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
-  assets:
-  - lib/kalkulator-bangun-datar/image/pizzas.png
-  - lib/kalkulator-bangun-datar/image/roda.png
-  - lib/kalkulator-bangun-datar/image/win.png
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
