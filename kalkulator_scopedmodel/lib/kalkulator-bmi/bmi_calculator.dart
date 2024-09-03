@@ -1,6 +1,6 @@
-import 'package:bmi_calculator/bmi_model.dart';
-import 'package:bmi_calculator/bmi_result.dart';
-import 'package:bmi_calculator/input_field.dart';
+import 'package:kalkulator_scopedmodel/kalkulator-bmi/bmi_model.dart';
+import 'package:kalkulator_scopedmodel/kalkulator-bmi/bmi_result.dart';
+import 'package:kalkulator_scopedmodel/kalkulator-bmi/input_field.dart';
 import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:kalkulator/models/kalkulator.dart';
+import 'package:kalkulator_scopedmodel/kalkulator_aritmatika/models/kalkulator.dart';
 import 'package:scoped_model/scoped_model.dart';
 
 class KalkulatorPage extends StatelessWidget {
